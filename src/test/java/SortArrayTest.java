@@ -19,7 +19,10 @@ public class SortArrayTest {
 
 
     }
- @Test
+    //2 Positive
+    //All elements are equal
+    @Test
+
     public void testValidAllEqualArray_HappyPath(){
         ///AAA
         int[] array = {3,3,3};
@@ -32,7 +35,7 @@ public class SortArrayTest {
 
 
     }
-//Negative
+    // 3 Negative
     @Test
     public void testNullArrayNegative(){
         ///AAA
@@ -46,6 +49,7 @@ public class SortArrayTest {
 
     }
 
+    // Negative
     @Test
     public void testEmptyArrayNegative(){
         ///AAA
