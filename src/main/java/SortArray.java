@@ -21,7 +21,7 @@ public class SortArray {
     }
 
 
-    public int[] sortArray(int[] array) {
+    public static int[] sortArray(int[] array) {
         int temp = 0;
         if (array != null && array.length > 0) {
             for (int i = 0; i < array.length; i++) {
@@ -36,5 +36,21 @@ public class SortArray {
             return array;
         }
         return new int[0];
+    }
+    public static int [] bubbleSort(int[] array) {
+        //int[]arr2 = new int [array.length];
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                int temp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = temp;
+               // count++;
+            }
+        }
+        return array;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(sortArray(new int [] {4, 3, 7, 12, 5, 2, 9, 4, 12})));
     }
 }

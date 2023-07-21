@@ -2,6 +2,23 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BiggerValueTest {
+
+    private String sharedData;
+
+    @Test
+    public void setupData() {
+        // Установка общих данных
+        sharedData = "Тестовые данные";
+    }
+
+    @Test(dependsOnMethods = "setupData")
+    public void useSharedData() {
+        // Использование общих данных
+        System.out.println(sharedData);
+    }
+
+
+
     //Test Data:
     //3333, 9999
     @Test
